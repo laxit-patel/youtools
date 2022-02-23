@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtools</title>
+
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/material-kit-pro.min.css">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+
+</head>
+
+<body>
+    <!-- start:header -->
+    <div class="container position-sticky z-index-sticky top-0">
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg  blur border-radius-xl top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+                    <div class="container-fluid px-0">
+                        <a href="../index.html" class="navbar-brand font-weight-bolder ms-sm-3  d-none d-md-block" rel="tooltip" title="" data-placement="bottom">
+                            YouTools
+                        </a>
+                        <a href="../index.html" class="navbar-brand font-weight-bolder ms-sm-3  d-block d-md-none" rel="tooltip" title="" data-placement="bottom">
+                            YouTools
+                        </a>
+
+                        <button class="navbar-toggler shadow-none ms-md-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon mt-2">
+                            <span class="navbar-toggler-bar bar1"></span>
+                            <span class="navbar-toggler-bar bar2"></span>
+                            <span class="navbar-toggler-bar bar3"></span>
+                            </span>
+                        </button>
+                        <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0" id="navigation">
+                            <ul class="navbar-nav navbar-nav-hover ms-auto">
+
+                                <li class="nav-item dropdown dropdown-hover mx-2">
+                                    <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" role="button" id="dropdownMenuBlocks" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="material-icons me-2   text-md">construction</i> Tools
+                                        <img src="../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-2 d-lg-block d-none">
+                                        <img src="../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow d-lg-none d-block ms-auto">
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuBlocks">
+                                        <div class="d-none d-lg-block">
+                                            <ul class="list-group">
+                                                <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
+                                                    <a class="dropdown-item py-2 ps-3 border-radius-md">
+                                                        <div class="d-flex">
+                                                            <div class="w-100 d-flex align-items-center justify-content-between">
+                                                                <div>
+                                                                    <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Calculators</h6>
+
+                                                                </div>
+                                                                <img src="../assets/img/down-arrow.svg" alt="down-arrow" class="arrow">
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
+                                                        <a class="dropdown-item ps-3 border-radius-md mb-1">
+                                                            Age Calculator
+                                                        </a>
+                                                    </div>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="row d-lg-none">
+                                            <div class="col-md-12">
+                                                <div class="d-flex mb-2">
+                                                    <div class="w-100 d-flex align-items-center justify-content-between">
+                                                        <div>
+                                                            <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Calculator</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <a href="./tools/age-calculator.html" class="dropdown-item ps-3 border-radius-md mb-1">
+                                                    Age Calculator
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                            <ul class="navbar-nav d-lg-block d-none">
+                                <li class="nav-item">
+                                    <a class="btn btn-sm  bg-gradient-primary  mb-0 me-1">Suggest</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!-- End Navbar -->
+            </div>
+        </div>
+    </div>
+    <!-- End Navbar -->
+    <header>
+        <div class="page-header min-vh-75 bg-svg-wave" loading="lazy ">
+            <span class="mask bg-gradient-dark opacity-4 "></span>
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-lg-8 mx-auto text-white text-center ">
+                        <h2 class="text-white ">Age Calculator</h2>
+                        <p class="lead ">Enter Your Birthdate & Find out your exact time spent on earth 🌍</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6 ">
+            <div class="container ">
+                <div class="row border-radius-md pb-4 p-3 mx-sm-0 mx-1 position-relative ">
+
+                    <div class="col-lg-4 mt-lg-n2 mt-2 ">
+                        <label class="ms-0 fw-bolder ">Select Birthday</label>
+                        <div class="input-group input-group-static ">
+                            <span class="input-group-text "><i class="fas fa-calendar "></i></span>
+                            <input class="form-control datepicker " placeholder="Please select date " type="text " id="birthday">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mt-lg-n2 mt-2 ">
+                        <label class="ms-0 fw-bolder ">Select Date</label>
+                        <div class="input-group input-group-static ">
+                            <span class="input-group-text "><i class="fas fa-calendar "></i></span>
+                            <input class="form-control datepicker " placeholder="Please select date " type="text " id="today">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mt-lg-n2 mt-2 ">
+
+                        <button type="button" id="calculate" class="btn btn-lg bg-gradient-primary w-100 mb-0 mt-3">Calculate</button>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="display-1 text-center" id="age-container" style="display: none;"></h1>
+
+            <div class="row mt-4" id="result-row" style="display: none;">
+                <div class="col-md-3 col-sm-6 col-6">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h1 class="text-gradient text-primary"><span id="status1" countto="21">21</span> </h1>
+                            <h6 class="mb-0 font-weight-bolder">Year</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-6">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h1 class="text-gradient text-primary"> <span id="status2" countto="44">44</span> </h1>
+                            <h6 class="mb-0 font-weight-bolder">Month</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-6 mt-4 mt-md-0">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h1 class="text-gradient text-primary"><span id="status3" countto="87">87</span> </h1>
+                            <h6 class="mb-0 font-weight-bolder">Week</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-6 mt-4 mt-md-0">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h1 class="text-gradient text-primary"><span id="status4" countto="417">417</span> </h1>
+                            <h6 class="mb-0 font-weight-bolder">Day</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- end:header -->
+
+    <footer class="footer pt-5 ">
+        <div class="container">
+            <div class=" row">
+                <div class="col-12">
+                    <div class="text-center">
+                        <p class="text-dark my-4 text-sm font-weight-normal">
+                            All rights reserved. Copyright ©
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script> YouTool.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script src="../assets/js/core/bootstrap.min.js" type="text/javascript "></script>
+<script src="../assets/js/core/jquery.min.js" type="text/javascript "></script>
+<script src="../assets/js/material-kit-pro.min.js" type="text/javascript "></script>
+<script src="../assets/js/plugins/flatpickr.min.js"></script>
+<script src="../assets/scripts/age-calculator.js" type="text/javascript "></script>
+
+</html>
