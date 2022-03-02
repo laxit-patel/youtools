@@ -4,3 +4,20 @@
     background-attachment: fixed;
     background-size: cover;
 }
+
+.me-md {
+    margin-right: 5%;
+}
+
+.ms-md {
+    margin-left: 5%;
+}
+
+.mt-md {
+    margin-top: 5%;
+}
+
+.bg-full {
+    background-attachment: fixed;
+    background-size: cover;
+}
