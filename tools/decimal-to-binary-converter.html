@@ -20,20 +20,7 @@
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../assets/css/material-kit.css?v=1.2.1" rel="stylesheet" />
     <link href="../assets/css/custom.css" rel="stylesheet" />
-    <style>
-        input[type=checkbox] {
-            /* Double-sized Checkboxes */
-            -ms-transform: scale(2);
-            /* IE */
-            -moz-transform: scale(2);
-            /* FF */
-            -webkit-transform: scale(2);
-            /* Safari and Chrome */
-            -o-transform: scale(2);
-            /* Opera */
-            padding: 10px;
-        }
-    </style>
+
 </head>
 
 <body class="landing-page">
@@ -73,11 +60,6 @@
 
                             </li>
                             <li>
-                                <a href="">
-                                    <i class="fa fa-key material-icons"></i>Encode / Decode
-                                </a>
-                            </li>
-                            <li>
                                 <a href="decimal-to-binary-converter.html">
                                     <i class="fa fa-code material-icons"></i>Decimal ti Binary
                                 </a>
@@ -114,12 +96,13 @@
     </nav>
 
 
-    <div class="page-header header-filter bg-full" style="background-image: url('../assets/img/password.jpg');">
+    <div class="page-header header-filter bg-full" style="background-image: url('../assets/img/binary.jpg');">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h1 class="title">Password Generator</h1>
-                    <h4>Generate Random secure password to keep your files secure</h4>
+                    <h1 class="title">Binary / Decimal
+                        <br>Converter</h1>
+                    <h4>Convert computer binary code or string into human readable DECIMAL string</h4>
                 </div>
             </div>
         </div>
@@ -128,63 +111,30 @@
     <div class="main main-raised">
         <div class="container">
 
-
             <div class="section section-contacts">
                 <div class="row " style="margin-top: 5%;">
 
-
-                    <form class="bg-light bg-gradient bg-opacity-50 shadow-lg p-3 rounded" oninput="GeneratePassword()">
-
-                        <div class="container d-flex gap-5">
-
-                            <h3 class="text-light  text-center  font-monospace m-0 " id="output">
-
-                            </h3>
-
-                            <div class="btn-group bootstrap-select">
-
-                                <input class="form-control  h2 text-center form-control-lg" id="range_num" type="number" name="length" min="1" max="64" value="16" oninput="range_slider.value = this.value" />
-                                <input class="form-range form-control-range" id="range_slider" type="range" min="1" max="64" value="16" oninput="range_num.value = this.value" />
-
-                            </div>
-
-
-                            <fieldset class="col mt-md" id="include" name="include">
-
-                                <div class="row">
-                                    <div class="form-check col-md-4 form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch" value="uppercase" id="Uppercase" onclick="CheckBoxOnClick()" checked="checked" />
-                                        <label class="form-check-label ms-md user-select-none" for="Uppercase">Uppercase</label>
-                                    </div>
-                                    <div class="form-check col-md-4 form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch" value="lowercase" id="Lowercase" onclick="CheckBoxOnClick()" checked="checked" />
-                                        <label class="form-check-label ms-md user-select-none" for="Lowercase">Lowercase</label>
-                                    </div>
-                                    <div class="form-check col-md-4 form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch" value="numbers" id="Numbers" onclick="CheckBoxOnClick()" checked="checked" />
-                                        <label class="form-check-label ms-md user-select-none" for="Numbers">Numbers</label>
-                                    </div>
-                                </div>
-
-                            </fieldset>
-                        </div>
-                    </form>
-                    <div class="bg-secondary bg-gradient bg-opacity-75 shadow-lg rounded p-2 text-break d-flex gap-3 align-items-center">
-
-                        <div class="row mt-md">
-                            <div class="col-md-6">
-                                <button class="btn btn-lg btn-block btn-primary btn-round" id="copy" type="button" data-bs-toggle="tooltip" title="Copy To Clipboard" allow="clipboard-read; clipboard-write" onclick="CopyPassword()">Copy</button>
-                            </div>
-                            <div class="col-md-6">
-                                <button class="btn btn-block btn-lg btn-primary btn-round" type="button" title="Generate Another Password" onclick="GeneratePassword()">Regenerate</button>
-                            </div>
-                        </div>
-
+                    <div class="col-md-12">
+                        <select class="form-control form-control-lg text-center" id="convert_value">
+                                <option disabled selected>-- Select Conversion --</option>
+                                <option value="decimal">Decimal to Binary</option>
+                                <option value="binary">Binary to Decimal</option>
+                              </select>
                     </div>
 
+                    <div class="col-md-12">
+                        <input class="form-control form-control-lg" type="text" placeholder="Enter Decimal value" id="val" />
+                    </div>
+
+                    <div class="col-md-12">
+                        <input class="form-control form-control-lg" type="text" placeholder="Result" id="result" disabled/>
+                    </div>
+
+                    <div class="col-md-12">
+                        <button class="btn btn-rose btn-block btn-round btn-lg" id="convert">convert</button>
+                    </div>
 
                 </div>
-
             </div>
         </div>
 
@@ -318,6 +268,6 @@
 <!--    Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc    -->
 <script src="../assets/js/material-kit.js?v=1.2.1" type="text/javascript"></script>
 
-<script src="../assets/js/tools/password-generator.js"></script>
+<script src="../assets/js/tools/decimal-to-binary.js"></script>
 
 </html>
