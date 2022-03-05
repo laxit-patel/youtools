@@ -1,100 +1,80 @@
-function calculateDateOfBirth() {
+var calculate = document.getElementById('calculate'); //calculate button
+var result = document.getElementById('result-row');
 
-    var msg;
-    var age = [];
 
-    //number of milliseconds in a year, month, week, day, hour, minute, second, in that order
-    var msConversions = [3.156e10, 2.63e9, 6.6048e8, 8.64e7, 3.6e6, 60000, 1000];
+calculate.addEventListener('click', function(params) {
+    var birthday = new Date($('#birthday').val());
+    var today = new Date($('#today').val());
 
-    //output strings
-    var pluralUnits = ["years", "months", "weeks", "days", "hours", "minutes", "seconds"];
-    var singleUnits = ["year", "month", "week", "day", "hour", "minute", "second"];
+    var yearNow = today.getYear();
+    var monthNow = today.getMonth();
+    var dateNow = today.getDate();
 
-    //Get user's input
-    var $birthyear = $('#year').val();
-    var $birthmonth = $('#month').val();
-    var $birthday = $('#day').val();
+    var yearDob = birthday.getYear();
+    var monthDob = birthday.getMonth();
+    var dateDob = birthday.getDate();
+    var age = {};
+    var ageString = "";
+    var yearString = "";
+    var monthString = "";
+    var dayString = "";
 
-    //Set today and user's birthdate
-    var today = new Date();
-    var birthdate = new Date($birthyear, $birthmonth, $birthday);
 
-    //Get age in milliseconds
-    var ageInMs = today.getTime() - birthdate.getTime();
+    yearAge = yearNow - yearDob;
 
-    //Sets values for age array
-    function setAges() {
-        var i;
-
-        for (i = 0; i < msConversions.length; i++) {
-
-            if (ageInMs / msConversions[i] < 0) {
-                console.log("Dude, shut uuuup, you were not born in the future.");
-                return false;
-            }
-
-            if (i === 0) {
-                age.push(Math.floor(ageInMs / msConversions[0]));
-            }
-
-            if (i > 0) {
-                age.push(Math.floor((ageInMs % msConversions[i - 1]) / msConversions[i]));
-            }
-
-        }
-
+    if (monthNow >= monthDob)
+        var monthAge = monthNow - monthDob;
+    else {
+        yearAge--;
+        var monthAge = 12 + monthNow - monthDob;
     }
 
-    //Let's call it
-    setAges();
+    if (dateNow >= dateDob)
+        var dateAge = dateNow - dateDob;
+    else {
+        monthAge--;
+        var dateAge = 31 + dateNow - dateDob;
 
-    if (age.length === 0) {
-        $('#results').empty();
-        $('#results').append("<p>Dude, shut uuuup, you were not born in the future.</p>");
-        return false;
-    } else {
-        //Set up output
-        msg = "<p>You were born on " + $('#month option:selected').text() + " " + birthdate.getDate() + ", " + birthdate.getFullYear() + ".</p><p>You are ";
-
-        //Loop through age array and add some formatting 
-        var i;
-        for (i = 0; i < age.length; i++) {
-
-            //just to make sure the commas make sense
-            if (age[i + 1] !== undefined) {
-
-                //loop through age array and concatenate appropriate units
-                if (age[i] === 1) {
-                    msg += age[i] + " " + singleUnits[i] + ", ";
-                } else {
-                    msg += age[i] + " " + pluralUnits[i] + ", ";
-                }
-
-            } else {
-
-                if (age[i] === 1) {
-                    msg += age[i] + " " + singleUnits[i];
-                } else {
-                    msg += age[i] + " " + pluralUnits[i];
-                }
-            }
-
+        if (monthAge < 0) {
+            monthAge = 11;
+            yearAge--;
         }
-
-        msg += " old.</p>";
-
-        //append to DOM
-        $('#results').empty();
-        $('#results').append(msg);
-
-        document.getElementById('msg_container').style.display = 'block';
     }
-}
 
-//on form submit
-$('#dateOfBirth').bind('submit', function(e) {
-    e.preventDefault();
-    //Make it keep counting
-    setInterval(function() { calculateDateOfBirth(); }, 1000);
+    age = {
+        years: yearAge,
+        months: monthAge,
+        days: dateAge
+    };
 
+    if (age.years > 1) yearString = " years";
+    else yearString = " year";
+    if (age.months > 1) monthString = " months";
+    else monthString = " month";
+    if (age.days > 1) dayString = " days";
+    else dayString = " day";
+
+
+    if ((age.years > 0) && (age.months > 0) && (age.days > 0))
+        ageString = age.years + yearString + ", " + age.months + monthString + ", and " + age.days + dayString + " old.";
+    else if ((age.years == 0) && (age.months == 0) && (age.days > 0))
+        ageString = "Only " + age.days + dayString + " old!";
+    else if ((age.years > 0) && (age.months == 0) && (age.days == 0))
+        ageString = age.years + yearString + " old. Happy Birthday!!";
+    else if ((age.years > 0) && (age.months > 0) && (age.days == 0))
+        ageString = age.years + yearString + " and " + age.months + monthString + " old.";
+    else if ((age.years == 0) && (age.months > 0) && (age.days > 0))
+        ageString = age.months + monthString + " and " + age.days + dayString + " old.";
+    else if ((age.years > 0) && (age.months == 0) && (age.days > 0))
+        ageString = age.years + yearString + " and " + age.days + dayString + " old.";
+    else if ((age.years == 0) && (age.months > 0) && (age.days == 0))
+        ageString = age.months + monthString + " old.";
+    else ageString = "Oops! Could not calculate age!";
+
+    console.log(ageString);
+    $('#age').html(ageString);
+    $('#age-container').show();
+
+
+    $('#result-row').fadeIn('slow');
 });
