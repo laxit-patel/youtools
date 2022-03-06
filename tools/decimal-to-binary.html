@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Toolsvale</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../assets/css/material-kit-pro.min.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../assets/css/nucleo-icons.css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <script src="../assets/js/fa.js" crossorigin="anonymous"></script>
+    <script src="../assets/js/custom.js"></script>
+</head>
+
+<body>
+
+    <custom-navbar></custom-navbar>
+
+    <header>
+        <div class="page-header  min-vh-75 " style="background-image: url('../assets/img/code.jpg')" loading="lazy ">
+            <span class="mask bg-gradient-dark opacity-4 "></span>
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-lg-8 mx-auto text-white text-center ">
+                        <h2 class="text-white ">Decimal To Binary Converter</h2>
+                        <p class="lead ">This is computer student friendly tool, it converts binary to decimal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-body blur shadow-primary mx-3 mx-md-4 mt-n6 ">
+            <div class="container">
+
+                <div class="row mt-5">
+                    <div class="col-md-6">
+                        <div class="input-group input-group-static mb-4">
+                            <label>Enter The Value</label>
+                            <input type="text" class="form-control" id="val">
+                        </div>
+                        <div class="input-group input-group-static mb-4">
+                            <label>Result</label>
+                            <input type="text" class="form-control" id="result">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <div class="input-group input-group-static mb-4">
+                            <label for="exampleFormControlSelect1" class="ms-0">Select Conversion Type</label>
+                            <select class="form-control custom-select" id="convert_value">
+                            <option disabled selected>-- Select --</option>
+                            <option value="decimal">Decimal to Binary</option>
+                            <option value="binary">Binary to Decimal</option>
+                            </select>
+                        </div>
+
+                        <button class="btn btn-primary w-100 btn-lg mb-0" id="convert">Convert</button>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <section class="py-lg-5 mt-lg-2">
+                <div class="container">
+                    <div class="row my-5">
+                        <div class="col-md-6 mx-auto text-center">
+                            <h2>Frequently Asked Questions</h2>
+                            <p>Below are the frequently asked question about this tool. </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-10 mx-auto">
+                            <div class="accordion" id="accordionRental">
+                                <div class="accordion-item mb-3">
+                                    <h5 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button border-bottom font-weight-bold text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            What is Decimal ?
+                                            <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"
+                                                aria-hidden="true"></i>
+                                            <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"
+                                                aria-hidden="true"></i>
+                                        </button>
+                                    </h5>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionRental">
+                                        <div class="accordion-body text-lg">
+                                            Decimal is basically a number system which consist of 10 digital starts from 0, and ends on 9.this number system is widely used in day to day mathematics and general purpose calculating activities. using this online tool you will be able to see how computer
+                                            that only reads binary will interpret the decimal numbers.main objective of this online decimal to binary tool is to demonstrate just that.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item mb-3">
+                                    <h5 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button border-bottom font-weight-bold text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            What is Binary ?
+                                            <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"
+                                                aria-hidden="true"></i>
+                                            <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"
+                                                aria-hidden="true"></i>
+                                        </button>
+                                    </h5>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionRental">
+                                        <div class="accordion-body text-lg">
+                                            Binary basically means two, everything that can be represented with the two number or object is binary.it is specially useful in computing because it resembles the nature of true and false that are building blocks of logic gate programming. for human
+                                            decimal is easily readable compared to binary. but reverse of this is also true, as much hard it is for humans to read binary, its that easy for a computer processor to interpret binary text
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item mb-3">
+                                    <h5 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button border-bottom font-weight-bold text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            How to use online decimal to binary converter tool?
+                                            <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"
+                                                aria-hidden="true"></i>
+                                            <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"
+                                                aria-hidden="true"></i>
+                                        </button>
+                                    </h5>
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionRental">
+                                        <div class="accordion-body text-lg ">
+                                            This online tool is aimed at computer science students and programmers. for them, it is often required to convert some code to decimal and decimal to binary.so this tool expects beforehand that you already have a decimal or binary code that you want to
+                                            convert.process after that is super easy.everybody knows copy pasting right? well, thats all there is to it. just paste your decimal or binary code inside the first textbox, and select the operation. instantaneously
+                                            it will generate the desired output that then you can use it in your own way.
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+    </header>
+
+    <section class="py-7">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mx-auto">
+                    <h3 class="mb-1">See other Tools</h3>
+                    <p class="mb-6 px-md-6">Check out other tools on our website</p>
+                </div>
+                <div class="col-lg-4 mb-lg-0 mb-5">
+                    <div class="card shadow-primary shadow-lg">
+                        <div class="card-header p-0 mx-3 mt-n4 position-relative z-index-1">
+                            <a href="javascript:;" class="d-block blur-shadow-image">
+                                <img src="../assets/img/password.jpg" class="img-fluid border-radius-md" alt="anastasia" loading="lazy">
+                            </a>
+                            <div class="colored-shadow" style="background-image: url(&quot;../../assets/img/examples/color2.jpg&quot;);"></div>
+                        </div>
+                        <div class="card-body">
+                            <span class="text-gradient text-primary text-uppercase text-xs font-weight-bold">Personal Tools</span>
+                            <a href="javascript:;" class="card-title mt-3 h5 d-block text-darker">
+                                Password Generator
+                            </a>
+                            <p class="card-description mb-4">
+                                Generate secure password in seconds, increase the security of your online experience.
+                            </p>
+                            <div class="author align-items-center">
+                                <a href="./password-generator.html" class="btn bg-gradient-primary btn-icon btn-lg" type="button">
+                                    <div class="d-flex align-items-center">
+                                        Open
+                                        <i class="fa fa-arrow-right ms-2" aria-hidden="true"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-lg-0 mb-5">
+                    <div class="card shadow-primary shadow-lg">
+                        <div class="card-header p-0 mx-3 mt-n4 position-relative z-index-1">
+                            <a href="javascript:;" class="d-block blur-shadow-image">
+                                <img src="../assets/img/calcee.jpg" class="img-fluid border-radius-md" alt="anastasia" loading="lazy">
+                            </a>
+                            <div class="colored-shadow" style="background-image: url(&quot;../../assets/img/examples/color2.jpg&quot;);"></div>
+                        </div>
+                        <div class="card-body">
+                            <span class="text-gradient text-primary text-uppercase text-xs font-weight-bold">Personal Tools</span>
+                            <a href="javascript:;" class="card-title mt-3 h5 d-block text-darker">
+                                Age Calculator
+                            </a>
+                            <p class="card-description mb-4">
+                                Generate secure password in seconds, increase the security of your online experience.
+                            </p>
+                            <div class="author align-items-center">
+                                <a href="./age-calculator.html" class="btn bg-gradient-primary btn-icon btn-lg" type="button">
+                                    <div class="d-flex align-items-center">
+                                        Open
+                                        <i class="fa fa-arrow-right ms-2" aria-hidden="true"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-lg-0 mb-5">
+                    <div class="card shadow-primary shadow-lg">
+                        <div class="card-header p-0 mx-3 mt-n4 position-relative z-index-1">
+                            <a href="javascript:;" class="d-block blur-shadow-image">
+                                <img src="../assets/img/fest.jpg" class="img-fluid border-radius-md" alt="annie" loading="lazy">
+                            </a>
+                            <div class="colored-shadow" style="background-image: url(&quot;../../assets/img/examples/color1.jpg&quot;);"></div>
+                        </div>
+                        <div class="card-body">
+                            <span class="text-gradient text-warning text-uppercase text-xs font-weight-bold">Festival</span>
+                            <a href="javascript:;" class="text-darker card-title mt-3 h5 d-block">
+                                Festival Photo & Videos
+                            </a>
+                            <p class="card-description mb-4">
+                                Spice up your boring text greetings into visual greeting for every occasions
+                            </p>
+                            <div class="author align-items-center">
+                                <a href="https://play.google.com/store/apps/details?id=com.bizzpost.in" class="btn bg-gradient-primary btn-icon btn-lg" type="button">
+                                    <div class="d-flex align-items-center">
+                                        Open
+                                        <i class="fa fa-arrow-right ms-2" aria-hidden="true"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end:header -->
+    <custom-footer></custom-footer>
+
+    <script src="../assets/js/core/bootstrap.min.js"></script>
+    <script src="../assets/js/core/jquery.min.js"></script>
+    <script src="../assets/js/material-kit-pro.min.js"></script>
+    <script src="../assets/js/tools/decimal-to-binary.js"></script>
+
+</body>
+
+</html>

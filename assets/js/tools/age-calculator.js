@@ -1,6 +1,11 @@
 var calculate = document.getElementById('calculate'); //calculate button
 var result = document.getElementById('result-row');
 
+if (document.querySelector('.datepicker')) {
+    flatpickr('.datepicker', {
+
+    }); // fl   atpickr
+}
 
 calculate.addEventListener('click', function(params) {
     var birthday = new Date($('#birthday').val());
@@ -71,7 +76,6 @@ calculate.addEventListener('click', function(params) {
         ageString = age.months + monthString + " old.";
     else ageString = "Oops! Could not calculate age!";
 
-    console.log(ageString);
     $('#age').html(ageString);
     $('#age-container').show();
 

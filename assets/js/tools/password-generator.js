@@ -1,46 +1,85 @@
-"use strict";
-const abc_length = 26,
-    all_characters = {
-        uppercase: Array.from({ length: abc_length }, (e, i) => String.fromCharCode(i + 65)),
-        lowercase: Array.from({ length: abc_length }, (e, i) => String.fromCharCode(i + 97)),
-        numbers: [...Array(10).keys()].toString().split(",")
-    };
+'use strict';
+const resultEl = document.getElementById('result'),
+    lengthEl = document.getElementById('length'),
+    uppercaseEl = document.getElementById('uppercase'),
+    lowercaseEl = document.getElementById('lowercase'),
+    numbersEl = document.getElementById('numbers'),
+    symbolsEl = document.getElementById('symbols'),
+    generateEl = document.getElementById('generate'),
+    clipboardEl = document.getElementById('clipboard');
 
-let characters = [];
+const randomFunc = {
+    lower: getRandomLower,
+    upper: getRandomUpper,
+    number: getRandomNumber,
+    symbol: getRandomSymbol,
+};
 
-function GeneratePassword() {
-    let str = "";
-    const length = +range_num.value;
-    for (let i = 0; i < length; i++) {
-        str += characters[Math.floor(Math.random() * characters.length)];
+clipboardEl.addEventListener('click', () => {
+    const textarea = document.createElement('textarea'),
+        password = resultEl.value;
+
+    if (!password) return;
+
+    textarea.value = password;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    textarea.remove();
+    alert('Password copied to clipboard!');
+});
+
+generateEl.addEventListener('click', () => {
+    const length = +lengthEl.value,
+        hasLower = lowercaseEl.checked,
+        hasUpper = uppercaseEl.checked,
+        hasNumber = numbersEl.checked,
+        hasSymbol = symbolsEl.checked;
+
+    resultEl.value = generatePassword(
+        hasLower,
+        hasUpper,
+        hasNumber,
+        hasSymbol,
+        length
+    );
+});
+
+function generatePassword(lower, upper, number, symbol, length) {
+    let generatedPassword = '';
+    const typesCount = lower + upper + number + symbol,
+        typesArr = [{ lower }, { upper }, { number }, { symbol }].filter(
+            (item) => Object.values(item)[0]
+        );
+    if (typesCount === 0) {
+        return '';
     }
-    output.innerHTML = str;
-}
 
-function CheckBoxOnClick() {
-    var _a;
-    const checked_inputs = include.querySelectorAll("input[type=checkbox]:checked");
-    if (!checked_inputs.length) {
-        (_a = window.event) === null || _a === void 0 ? void 0 : _a.preventDefault();
-    } else {
-        characters.length = 0;
-        const checked = [...checked_inputs].map(({ value }) => value);
-        for (let i of checked) {
-            if (all_characters.hasOwnProperty(i)) {
-                characters = characters.concat(all_characters[i]);
-            }
-        }
+    for (let i = 0; i < length; i += typesCount) {
+        typesArr.forEach((type) => {
+            const funcName = Object.keys(type)[0];
+            generatedPassword += randomFunc[funcName]();
+        });
     }
+
+    const finalPassword = generatedPassword.slice(0, length);
+
+    return finalPassword;
 }
 
-function CopyPassword() {
-    var _a, _b, _c;
-    const range = document.createRange();
-    range.selectNode(output);
-    (_a = window.getSelection()) === null || _a === void 0 ? void 0 : _a.removeAllRanges();
-    (_b = window.getSelection()) === null || _b === void 0 ? void 0 : _b.addRange(range);
-    document.execCommand("copy");
-    (_c = window.getSelection()) === null || _c === void 0 ? void 0 : _c.removeAllRanges();
+function getRandomLower() {
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }
-CheckBoxOnClick();
-GeneratePassword();
+
+function getRandomUpper() {
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+}
+
+function getRandomNumber() {
+    return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+}
+
+function getRandomSymbol() {
+    const symbols = '!@#$%*&(){}[]=<>/,.';
+    return symbols[Math.floor(Math.random() * symbols.length)];
+}

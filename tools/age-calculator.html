@@ -1,289 +1,250 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
-    <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
-    <title>ToolsVaale</title>
-
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="keywords" content="age calculator, date of birth calculator, birthday calculator" />
-
-    <!--     Fonts and icons     -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-
-    <!-- CSS Files -->
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="../assets/css/material-kit.css?v=1.2.1" rel="stylesheet" />
-    <link href="../assets/css/custom.css" rel="stylesheet" />
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Toolsvale</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../assets/css/material-kit-pro.min.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../assets/css/nucleo-icons.css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <script src="../assets/js/fa.js" crossorigin="anonymous"></script>
+    <script src="../assets/js/custom.js"></script>
 </head>
 
-<body class="landing-page">
-    <nav class="navbar navbar-danger navbar-transparent navbar-absolute">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example">
-            		<span class="sr-only">Toggle navigation</span>
-		            <span class="icon-bar"></span>
-		            <span class="icon-bar"></span>
-		            <span class="icon-bar"></span>
-        		</button>
-                <a class="navbar-brand" href="../index.html">ToolsVale</a>
-            </div>
+<body>
 
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
+    <custom-navbar></custom-navbar>
 
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="material-icons">build</i> Tools
-                            <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu dropdown-with-icons">
-                            <li>
-                                <a>
-                                    <i class="material-icons">calculate</i> Age Calculator
-                                </a>
-
-                            </li>
-                            <li>
-                                <a href="password-generator.html">
-                                    <i class="material-icons">password</i> Password Generator
-                                </a>
-
-                            </li>
-                            <li>
-                                <a href="">
-                                    <i class="fa fa-key material-icons"></i>Encode / Decode
-                                </a>
-                            </li>
-                            <li>
-                                <a href="decimal-to-binary-converter.html">
-                                    <i class="fa fa-code material-icons"></i>Decimal ti Binary
-                                </a>
-                            </li>
-
-
-                        </ul>
-                    </li>
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="material-icons fa fa-photo"></i> Media
-                            <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu dropdown-with-icons">
-                            <li>
-                                <a href="https://play.google.com/store/apps/details?id=com.bizzpost.in">
-                                    <i class="material-icons fa fa-birthday-cake"></i> Festival Image / Video
-                                </a>
-                            </li>
-
-
-                        </ul>
-                    </li>
-
-                    <li class="button-container">
-                        <a class="btn btn-rose btn-round">
-                            <i class="material-icons fa fa-lightbulb-o"></i> Suggest
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-
-    <div class="page-header header-filter bg-full" style="background-image: url('../assets/img/calcee.jpg');">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h1 class="title">Age Calculator</h1>
-                    <h4>Calculate age in year month and days starting from your birthdate. you can also choose random date</h4>
+    <header>
+        <div class="page-header  min-vh-75 " style="background-image: url('../assets/img/calcee.jpg')" loading="lazy ">
+            <span class="mask bg-gradient-dark opacity-4 "></span>
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-lg-8 mx-auto text-white text-center ">
+                        <h2 class="text-white ">Age Calculator</h2>
+                        <p class="lead ">Enter Your Birthdate & Find out your exact time spent on earth 🌍 <br>using our age calculator online</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="main main-raised">
-        <div class="container">
+        <div class="card card-body blur shadow-primary mx-3 mx-md-4 mt-n6 ">
+            <div class="container ">
+                <div class="row border-radius-md pb-4 p-3 mx-sm-0 mx-1 mt-5 position-relative ">
 
-
-            <div class="section section-contacts">
-                <div class="row " style="margin-top: 5%;padding:5%">
-
-                    <div class="col-md-5 ">
-                        <div class="input-group " style="width: 100%;">
-                            <input class="form-control" placeholder="Select Birth Date ..." type="date" id="birthday">
+                    <div class="col-lg-4 mt-lg-n2 mt-2 ">
+                        <label class="ms-0 fw-bolder ">Select Birthday</label>
+                        <div class="input-group input-group-static ">
+                            <span class="input-group-text "><i class="fas fa-calendar "></i></span>
+                            <input class="form-control datepicker " placeholder="Please select date " type="text" id="birthday">
                         </div>
                     </div>
 
-                    <div class="col-md-5">
-                        <div class="input-group" style="width: 100%;">
-                            <input class="form-control" placeholder="Select Date ..." type="date" id="today">
+                    <div class="col-lg-4 mt-lg-n2 mt-2 ">
+                        <label class="ms-0 fw-bolder ">Select Date</label>
+                        <div class="input-group input-group-static ">
+                            <span class="input-group-text "><i class="fas fa-calendar "></i></span>
+                            <input class="form-control datepicker " placeholder="Please select date " type="text" id="today">
                         </div>
                     </div>
 
-                    <div class="col-md-2">
-                        <button type="button" id="calculate" style="width: 100%!important;" class="btn btn-block btn-lg btn-rose">Calculate</button>
+                    <div class="col-lg-4 mt-lg-n2 mt-2 ">
+
+                        <button type="button" id="calculate" class="btn btn-lg bg-gradient-primary w-100 mb-0 mt-3">Calculate</button>
                     </div>
-
-                    <div class="col-md-12" style="margin-top: 5%;display: none;" id="age-container">
-                        <div class="card">
-                            <div class="card-content content-info">
-                                <h5 class="category-social">
-                                    <i class="fa fa-birthday-cake"></i> Your Age Card
-                                </h5>
-                                <h4 class="card-title" id="age">
-
-                                </h4>
-
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-
             </div>
-        </div>
 
-    </div>
-
-    <div class="section">
-        <div class="container">
-            <div class="row">
-
-
-                <div class="col-md-12">
-                    <h2 class="title text-center">Similar Tools</h2>
-                    <br>
+            <section class="my-5 py-5 bg-gradient-dark position-relative overflow-hidden mx-n3" id="age-container" style="display: none;">
+                <img src="../assets/img/shapes/waves-white.svg" alt="pattern-lines" class="position-absolute start-0 top-0 w-100 opacity-1">
+                <div class="container position-relative z-index-2">
                     <div class="row">
-                        <div class="col-md-4">
-                            <div class="card card-blog">
-                                <div class="card-image">
-                                    <a href="#pablo">
-                                        <img class="img img-raised" src="../assets/img/password.jpg">
-                                    </a>
-                                    <div class="colored-shadow" style="background-image: url(&quot;../assets/img/examples/blog6.jpg&quot;); opacity: 1;"></div>
-                                </div>
-
-                                <div class="card-content">
-                                    <h6 class="category text-info">Text Tool</h6>
-                                    <h4 class="card-title">
-                                        <a href="#pablo">Password Generator</a>
-                                    </h4>
-                                    <p class="card-description">
-                                        generate robust and secure password.keep your private accounts from getting hacked from hackers. try this tool now
-                                    </p>
-
-                                    <a href="password-generator.html" class="btn  btn-round btn-rose">Open</a>
-                                </div>
-                            </div>
+                        <div class="col-lg-12 col-md-12 m-auto ">
+                            <h5 class="text-white mb-lg-0 ">
+                                <h1 class=" text-center text-white" id="age"></h1>
+                            </h5>
                         </div>
-
-                        <div class="col-md-4">
-                            <div class="card card-blog">
-                                <div class="card-image">
-                                    <a href="#pablo">
-                                        <img class="img img-raised" src="../assets/img/calcee.jpg">
-                                    </a>
-                                    <div class="colored-shadow" style="background-image: url(&quot;../assets/img/examples/blog8.jpg&quot;); opacity: 1;"></div>
-                                </div>
-                                <div class="card-content">
-                                    <h6 class="category text-success">
-                                        Calculator
-                                    </h6>
-                                    <h4 class="card-title">
-                                        <a href="#pablo">Age Calculator</a>
-                                    </h4>
-                                    <p class="card-description">
-                                        Get accurate date and time of your current age.know how much time you have spend and how much is left
-                                    </p>
-
-                                    <a href="" class="btn  btn-round btn-rose">Open</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="card card-blog">
-                                <div class="card-image">
-                                    <a href="#pablo">
-                                        <img class="img img-raised" src="../assets/img/fest.jpg">
-                                    </a>
-                                    <div class="colored-shadow" style="background-image: url(&quot;../assets/img/examples/blog7.jpg&quot;); opacity: 1;"></div>
-                                </div>
-
-                                <div class="card-content">
-                                    <h6 class="category text-danger">
-                                        <i class="material-icons">trending_up</i> Festival
-                                    </h6>
-                                    <h4 class="card-title">
-                                        <a href="#pablo">Festival Image & Video</a>
-                                    </h4>
-                                    <p class="card-description">
-                                        Enjoy your festivals with friends by creative image & videos.share the joy with your friends and family
-                                    </p>
-                                    <a href="https://play.google.com/store/apps/details?id=com.bizzpost.in" target="_blank" class="btn  btn-round btn-rose">Open</a>
-                                </div>
-                            </div>
-                        </div>
-
-
                     </div>
-
                 </div>
+            </section>
 
-            </div>
+            <section class="py-lg-5 mt-lg-2">
+                <div class="container">
+                    <div class="row my-5">
+                        <div class="col-md-6 mx-auto text-center">
+                            <h2>Frequently Asked Questions</h2>
+                            <p>Below are the frequently asked question about our birthday calculator. </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-10 mx-auto">
+                            <div class="accordion" id="accordionRental">
+                                <div class="accordion-item mb-3">
+                                    <h5 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button border-bottom font-weight-bold text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            What is Age Calculator ?
+                                            <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"
+                                                aria-hidden="true"></i>
+                                            <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"
+                                                aria-hidden="true"></i>
+                                        </button>
+                                    </h5>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionRental">
+                                        <div class="accordion-body text-lg">
+                                            Age calculator or alternatively known as date of birth calculator is nothing much different than a calculator that finds diffrene between two given date.<br> just enter birthdate and date that you want to end
+                                            your calculation upto.now this normal date difference calculator will work as an effective age calculator
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item mb-3">
+                                    <h5 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button border-bottom font-weight-bold text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Which date formats are valid ?
+                                            <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"
+                                                aria-hidden="true"></i>
+                                            <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"
+                                                aria-hidden="true"></i>
+                                        </button>
+                                    </h5>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionRental">
+                                        <div class="accordion-body text-lg">
+                                            birthdate and other date is formatted in DD-MM-YYYY format, it is important to note that the date format shoud be consistent.
+                                            <br> any other format will results in default error message. so please be carefull while choosing the date format. otherwise it will not work.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item mb-3">
+                                    <h5 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button border-bottom font-weight-bold text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            What are the expected Output?
+                                            <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"
+                                                aria-hidden="true"></i>
+                                            <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"
+                                                aria-hidden="true"></i>
+                                        </button>
+                                    </h5>
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionRental">
+                                        <div class="accordion-body text-lg ">
+                                            On the first load, there is not visible area or placeholder to display result. this is purely design choice to improve User Experience. After inserting proper input dates, user have to click on the calculate button. this will result ina black out box,
+                                            this has background graphics for better readability. as for the actual output, that will be provided in a human readable string. once again, this is a design choice to improve user experience as user can easily
+                                            read and distinguish the output.
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </div>
-    </div>
 
-    <footer class="footer footer-black">
+    </header>
+
+    <section class="py-7">
         <div class="container">
-            <nav class="pull-left">
-                <ul>
-                    <li>
-                        <a>
-                            Youtools.in
-                        </a>
-                    </li>
-                    <li>
-                        <a>
-                            About Us
-                        </a>
-                    </li>
-                    <li>
-                        <a>
-                            Contact Us
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="copyright pull-right">
-                &copy;
-                <script>
-                    document.write(new Date().getFullYear())
-                </script>, made with <i class="fa fa-heart text-rose heart"></i> by Laxit Patel
+            <div class="row">
+                <div class="col-12 text-center mx-auto">
+                    <h3 class="mb-1">See other Tools</h3>
+                    <p class="mb-6 px-md-6">Check out other tools on our website</p>
+                </div>
+                <div class="col-lg-4 mb-lg-0 mb-5">
+                    <div class="card shadow-primary shadow-lg">
+                        <div class="card-header p-0 mx-3 mt-n4 position-relative z-index-1">
+                            <a href="javascript:;" class="d-block blur-shadow-image">
+                                <img src="../assets/img/password.jpg" class="img-fluid border-radius-md" alt="anastasia" loading="lazy">
+                            </a>
+                            <div class="colored-shadow" style="background-image: url(&quot;../../assets/img/examples/color2.jpg&quot;);"></div>
+                        </div>
+                        <div class="card-body">
+                            <span class="text-gradient text-primary text-uppercase text-xs font-weight-bold">Personal Tools</span>
+                            <a href="javascript:;" class="card-title mt-3 h5 d-block text-darker">
+                                Password Generator
+                            </a>
+                            <p class="card-description mb-4">
+                                Generate secure password in seconds, increase the security of your online experience.
+                            </p>
+                            <div class="author align-items-center">
+                                <a href="./password-generator.html" class="btn bg-gradient-primary btn-icon btn-lg" type="button">
+                                    <div class="d-flex align-items-center">
+                                        Open
+                                        <i class="fa fa-arrow-right ms-2" aria-hidden="true"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-lg-0 mb-5">
+                    <div class="card shadow-primary shadow-lg">
+                        <div class="card-header p-0 mx-3 mt-n4 position-relative z-index-1">
+                            <a href="javascript:;" class="d-block blur-shadow-image">
+                                <img src="../assets/img/qr.png" class="img-fluid border-radius-md" alt="nastuh" loading="lazy">
+                            </a>
+                            <div class="colored-shadow" style="background-image: url(&quot;../../assets/img/examples/color3.jpg&quot;);"></div>
+                        </div>
+                        <div class="card-body">
+                            <span class="text-gradient text-info text-uppercase text-xs font-weight-bold">Generators</span>
+                            <a href="javascript:;" class="text-darker card-title mt-3 h5 d-block">
+                                QR Code Generator
+                            </a>
+                            <p class="card-description mb-4">
+                                simple on the go, QR Code generator for your dail tasks
+                            </p>
+                            <div class="author align-items-center">
+                                <a href="./qr-code-generator.html" class="btn bg-gradient-primary btn-icon btn-lg" type="button">
+                                    <div class="d-flex align-items-center">
+                                        Open
+                                        <i class="fa fa-arrow-right ms-2" aria-hidden="true"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-lg-0 mb-5">
+                    <div class="card shadow-primary shadow-lg">
+                        <div class="card-header p-0 mx-3 mt-n4 position-relative z-index-1">
+                            <a href="javascript:;" class="d-block blur-shadow-image">
+                                <img src="../assets/img/fest.jpg" class="img-fluid border-radius-md" alt="annie" loading="lazy">
+                            </a>
+                            <div class="colored-shadow" style="background-image: url(&quot;../../assets/img/examples/color1.jpg&quot;);"></div>
+                        </div>
+                        <div class="card-body">
+                            <span class="text-gradient text-warning text-uppercase text-xs font-weight-bold">Festival</span>
+                            <a href="javascript:;" class="text-darker card-title mt-3 h5 d-block">
+                                Festival Photo & Videos
+                            </a>
+                            <p class="card-description mb-4">
+                                Spice up your boring text greetings into visual greeting for every occasions
+                            </p>
+                            <div class="author align-items-center">
+                                <a href="https://play.google.com/store/apps/details?id=com.bizzpost.in" class="btn bg-gradient-primary btn-icon btn-lg" type="button">
+                                    <div class="d-flex align-items-center">
+                                        Open
+                                        <i class="fa fa-arrow-right ms-2" aria-hidden="true"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </footer>
+    </section>
+    <!-- end:header -->
+    <custom-footer></custom-footer>
+
+    <script src="../assets/js/core/bootstrap.min.js"></script>
+    <script src="../assets/js/core/jquery.min.js"></script>
+    <script src="../assets/js/plugins/flatpickr.min.js"></script>
+    <script src="../assets/js/material-kit-pro.min.js"></script>
+    <script src="../assets/js/tools/age-calculator.js"></script>
 
 </body>
-<!--   Core JS Files   -->
-<script src="../assets/js/jquery.min.js" type="text/javascript"></script>
-<script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="../assets/js/material.min.js"></script>
-
-
-<!--    Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc    -->
-<script src="../assets/js/material-kit.js?v=1.2.1" type="text/javascript"></script>
-<script src="../assets/js/plugins/flatpicker.js"></script>
-<script src="../assets/js/tools/age-calculator.js"></script>
 
 </html>

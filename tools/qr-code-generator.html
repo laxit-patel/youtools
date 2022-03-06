@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Toolsvale</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../assets/css/material-kit-pro.min.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../assets/css/nucleo-icons.css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <script src="../assets/js/fa.js" crossorigin="anonymous"></script>
+    <script src="../assets/js/custom.js"></script>
+</head>
+
+<body>
+
+    <custom-navbar></custom-navbar>
+
+    <header>
+        <div class="page-header  min-vh-75 " style="background-image: url('../assets/img/qr.png')" loading="lazy ">
+            <span class="mask bg-gradient-dark opacity-4 "></span>
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-lg-8 mx-auto text-white text-center ">
+                        <h2 class="text-white ">QR Code Generator</h2>
+                        <p class="lead ">Simplest form of QR Code generator</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-body blur shadow-primary mx-3 mx-md-4 mt-n6 ">
+            <div class="container">
+
+                <div class="row mt-7">
+                    <div class="col-md-3">
+                        <img src="https://chart.googleapis.com/chart?cht=qr&chl=Hello+World&chs=160x160&chld=L|0" class="qr-code w-100 img-responsive">
+                    </div>
+                    <div class="col-md-9">
+
+                        <div class="input-group input-group-static mb-4">
+                            <label>Enter Your Content Here</label>
+                            <textarea class="form-control form-control-lg fs-3" id="content" rows="9" placeholder="Write here ..." spellcheck="false"></textarea>
+                        </div>
+
+                        <button class="btn btn-primary w-100 btn-lg mb-0" id="generate">Generate</button>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <section class="py-lg-5 mt-lg-2">
+                <div class="container">
+                    <div class="row my-5">
+                        <div class="col-md-6 mx-auto text-center">
+                            <h2>Frequently Asked Questions</h2>
+                            <p>Below are the frequently asked question about this tool. </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-10 mx-auto">
+                            <div class="accordion" id="accordionRental">
+                                <div class="accordion-item mb-3">
+                                    <h5 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button border-bottom font-weight-bold text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            What is QR Code Generator ?
+                                            <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"
+                                                aria-hidden="true"></i>
+                                            <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"
+                                                aria-hidden="true"></i>
+                                        </button>
+                                    </h5>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionRental">
+                                        <div class="accordion-body text-lg">
+                                            QR Code generator is online tool to aid anyone who wants to convert a piece of text or link into scannable code rapidly.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+    </header>
+
+    <section class="py-7">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mx-auto">
+                    <h3 class="mb-1">See other Tools</h3>
+                    <p class="mb-6 px-md-6">Check out other tools on our website</p>
+                </div>
+                <div class="col-lg-4 mb-lg-0 mb-5">
+                    <div class="card shadow-primary shadow-lg">
+                        <div class="card-header p-0 mx-3 mt-n4 position-relative z-index-1">
+                            <a href="javascript:;" class="d-block blur-shadow-image">
+                                <img src="../assets/img/password.jpg" class="img-fluid border-radius-md" alt="anastasia" loading="lazy">
+                            </a>
+                            <div class="colored-shadow" style="background-image: url(&quot;../../assets/img/examples/color2.jpg&quot;);"></div>
+                        </div>
+                        <div class="card-body">
+                            <span class="text-gradient text-primary text-uppercase text-xs font-weight-bold">Personal Tools</span>
+                            <a href="javascript:;" class="card-title mt-3 h5 d-block text-darker">
+                                Password Generator
+                            </a>
+                            <p class="card-description mb-4">
+                                Generate secure password in seconds, increase the security of your online experience.
+                            </p>
+                            <div class="author align-items-center">
+                                <a href="./password-generator.html" class="btn bg-gradient-primary btn-icon btn-lg" type="button">
+                                    <div class="d-flex align-items-center">
+                                        Open
+                                        <i class="fa fa-arrow-right ms-2" aria-hidden="true"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-lg-0 mb-5">
+                    <div class="card shadow-primary shadow-lg">
+                        <div class="card-header p-0 mx-3 mt-n4 position-relative z-index-1">
+                            <a href="javascript:;" class="d-block blur-shadow-image">
+                                <img src="../assets/img/calcee.jpg" class="img-fluid border-radius-md" alt="anastasia" loading="lazy">
+                            </a>
+                            <div class="colored-shadow" style="background-image: url(&quot;../../assets/img/examples/color2.jpg&quot;);"></div>
+                        </div>
+                        <div class="card-body">
+                            <span class="text-gradient text-primary text-uppercase text-xs font-weight-bold">Personal Tools</span>
+                            <a href="javascript:;" class="card-title mt-3 h5 d-block text-darker">
+                                Age Calculator
+                            </a>
+                            <p class="card-description mb-4">
+                                Generate secure password in seconds, increase the security of your online experience.
+                            </p>
+                            <div class="author align-items-center">
+                                <a href="./age-calculator.html" class="btn bg-gradient-primary btn-icon btn-lg" type="button">
+                                    <div class="d-flex align-items-center">
+                                        Open
+                                        <i class="fa fa-arrow-right ms-2" aria-hidden="true"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-lg-0 mb-5">
+                    <div class="card shadow-primary shadow-lg">
+                        <div class="card-header p-0 mx-3 mt-n4 position-relative z-index-1">
+                            <a href="javascript:;" class="d-block blur-shadow-image">
+                                <img src="../assets/img/fest.jpg" class="img-fluid border-radius-md" alt="annie" loading="lazy">
+                            </a>
+                            <div class="colored-shadow" style="background-image: url(&quot;../../assets/img/examples/color1.jpg&quot;);"></div>
+                        </div>
+                        <div class="card-body">
+                            <span class="text-gradient text-warning text-uppercase text-xs font-weight-bold">Festival</span>
+                            <a href="javascript:;" class="text-darker card-title mt-3 h5 d-block">
+                                Festival Photo & Videos
+                            </a>
+                            <p class="card-description mb-4">
+                                Spice up your boring text greetings into visual greeting for every occasions
+                            </p>
+                            <div class="author align-items-center">
+                                <a href="https://play.google.com/store/apps/details?id=com.bizzpost.in" class="btn bg-gradient-primary btn-icon btn-lg" type="button">
+                                    <div class="d-flex align-items-center">
+                                        Open
+                                        <i class="fa fa-arrow-right ms-2" aria-hidden="true"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end:header -->
+    <custom-footer></custom-footer>
+
+    <script src="../assets/js/core/bootstrap.min.js"></script>
+    <script src="../assets/js/core/jquery.min.js"></script>
+    <script src="../assets/js/material-kit-pro.min.js"></script>
+    <script src="../assets/js/tools/qr-code-generator.js"></script>
+
+</body>
+
+</html>
