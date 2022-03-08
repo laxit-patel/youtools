@@ -4,12 +4,12 @@ class CustomHeader extends HTMLElement {
             <div class="container position-sticky z-index-sticky top-0">
             <div class="row">
                 <div class="col-12">
-                    <nav class="navbar navbar-expand-lg  blur border-radius-xl top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+                    <nav class="navbar navbar-expand-lg gradient-animation  blur border-radius-xl top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
                         <div class="container-fluid px-0">
-                            <a class="navbar-brand font-weight-bolder ms-sm-3  d-none d-md-block" href="../index.html" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom" >
+                            <a class="navbar-brand font-weight-bolder ms-sm-3 fs-5  d-none d-md-block text-white" href="../index.html" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom" >
                                 Toolsvala
                             </a>
-                            <a class="navbar-brand font-weight-bolder ms-sm-3  d-block d-md-none" href="../index.html" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom" >
+                            <a class="navbar-brand font-weight-bolder ms-sm-3  d-block d-md-none text-white" href="../index.html" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom" >
                                 Toolsvala
                             </a>
 
@@ -23,10 +23,10 @@ class CustomHeader extends HTMLElement {
                             <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0" id="navigation">
                                 <ul class="navbar-nav navbar-nav-hover ms-auto">
                                     <li class="nav-item dropdown dropdown-hover mx-2">
-                                        <a role="button" class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="ni ni-settings opacity-6 me-2 text-md"></i> Tools
-                                            <img src="../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-2 d-lg-block d-none">
-                                            <img src="../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-1 d-lg-none d-block ms-auto">
+                                        <a role="button" class="nav-link ps-2 d-flex cursor-pointer align-items-center text-white" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="ni ni-settings opacity-6 me-2 text-md text-white"></i> Tools
+                                            <img src="../assets/img/down-arrow.svg" alt="down-arrow" class="arrow ms-2 d-lg-block d-none">
+                                            <img src="../assets/img/down-arrow.svg" alt="down-arrow" class="arrow ms-1 d-lg-none d-block ms-auto">
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-end dropdown-menu-animation ms-n3 dropdown-xl p-3 border-radius-xl mt-0 mt-lg-3" aria-labelledby="dropdownMenuPages">
                                             <div class="row d-none d-lg-block">
@@ -51,6 +51,10 @@ class CustomHeader extends HTMLElement {
                                                             <a href="../tools/decimal-to-binary.html" class="dropdown-item text-wrap border-radius-md">
                                                                 <span>Decimal To Binary Converter</span>
                                                             </a>
+                                                            <a href="../tools/md5-hash-generator.html" class="dropdown-item text-wrap border-radius-md">
+                                                                <span>MD5 Generator</span>
+                                                            </a>
+
                                                             <hr class="vertical dark">
 
                                                         </div>
@@ -77,6 +81,9 @@ class CustomHeader extends HTMLElement {
                                                 </a>
                                                 <a href="../tools/decimal-to-binary.html" class="dropdown-item border-radius-md">
                                                     Decimal To Binary Converter
+                                                </a>
+                                                <a href="../tools/md5-hash-generator.html" class="dropdown-item border-radius-md">
+                                                    MD5 Hash Generator
                                                 </a>
                                                 <a href="../tools/password-generator.html" class="dropdown-item border-radius-md">
                                                     Password Generator
