@@ -4,7 +4,11 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Toolsvale</title>
+    <title>Toolsvala</title>
+    <link rel="canonical" href="https://www.creative-tim.com/product/material-kit-pro" />
+    <!--  Social tags      -->
+    <meta name="keywords" content="bootstrap, bootstrap 5, bootstrap5, ui kit, design system, responsive design, web design ui, ui design system, Material kit, Material design system">
+    <meta name="description" content="Most complex and innovative Design System Made by Creative Tim. Check our latest Premium Bootstrap 5 UI Kit.">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='../assets/css/material-kit-pro.min.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='../assets/css/nucleo-icons.css'>
@@ -18,84 +22,54 @@
     <custom-navbar></custom-navbar>
 
     <header>
-        <div class="page-header  min-vh-75 " style="background-image: url('../assets/img/password.jpg')" loading="lazy ">
+        <div class="page-header  min-vh-75 " style="background-image: url('../assets/img/dog.jpg')" loading="lazy ">
             <span class="mask bg-gradient-dark opacity-4 "></span>
             <div class="container ">
                 <div class="row ">
                     <div class="col-lg-8 mx-auto text-white text-center ">
-                        <h2 class="text-white ">Password Generator</h2>
-                        <p class="lead ">This is computer student friendly tool, it converts binary to decimal</p>
+                        <h2 class="text-white ">AGE in DOG Years</h2>
+                        <p class="lead ">This fun calculator tells how old would you be, if you were a dog.</p>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="card card-body blur shadow-primary mx-3 mx-md-4 mt-n6 ">
-            <div class="container">
+            <div class="container ">
+                <div class="row border-radius-md pb-4 p-3 mx-sm-0 mx-1 mt-5 position-relative ">
 
-                <div class="container">
-
-                    <div class="row mt-5">
-
-                        <div class="col-md-10">
-                            <div class="input-group input-group-static mb-4">
-                                <label>Password</label>
-                                <input type="text" class="form-control form-control-lg" id="result">
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="input-group input-group-static mb-4">
-                                <label>Length</label>
-                                <input type="number" class="form-control form-control-lg" id="length" min="4" max="60" value="20" />
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="uppercase" checked="">
-                                <label class="custom-control-label" for="customCheck1">Include Uppercase</label>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="lowercase" checked="">
-                                <label class="custom-control-label" for="customCheck1">Include Lowercase</label>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="numbers" checked="">
-                                <label class="custom-control-label" for="customCheck1">Include Number</label>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="symbols" checked="">
-                                <label class="custom-control-label" for="customCheck1">Include Symbol</label>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 mt-5">
-                            <button class="btn btn-lg btn-primary w-100" id="generate">Generate</button>
-                        </div>
-                        <div class="col-md-6 mt-5">
-                            <button class="btn btn-lg btn-primary w-100 btn-block" id="clipboard">Copy</button>
+                    <div class="col-lg-12 mt-3 ">
+                        <label class="ms-0 fw-bolder ">Enter Your Age</label>
+                        <div class="input-group input-group-static ">
+                            <input class="input form-control " type="number" min="0" oninput="this.value = !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null" placeholder="Enter age" id="years" required />
                         </div>
                     </div>
 
-
-
+                    <div class="col-lg-12 mt-3 ">
+                        <button type="button" onclick="ageInDogYears()" class="btn btn-lg bg-gradient-primary w-100 mb-0 mt-3">Generate</button>
+                    </div>
                 </div>
-
-
             </div>
 
+            <section class="my-5 py-5 bg-gradient-dark position-relative overflow-hidden mx-n3" id="age-container" style="display: none;">
+                <img src="../assets/img/shapes/waves-white.svg" alt="pattern-lines" class="position-absolute start-0 top-0 w-100 opacity-1">
+                <div class="container position-relative z-index-2">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 m-auto ">
+                            <h5 class="text-white mb-lg-0 ">
+                                <h1 class=" text-center text-white" id="age"></h1>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            <section class="py-lg-5 mt-lg-2">
+            <!-- <section class="py-lg-5 mt-lg-2">
                 <div class="container">
                     <div class="row my-5">
                         <div class="col-md-6 mx-auto text-center">
                             <h2>Frequently Asked Questions</h2>
-                            <p>Below are the frequently asked question about this tool. </p>
+                            <p>Below are the frequently asked question about our birthday calculator. </p>
                         </div>
                     </div>
                     <div class="row">
@@ -104,7 +78,7 @@
                                 <div class="accordion-item mb-3">
                                     <h5 class="accordion-header" id="headingOne">
                                         <button class="accordion-button border-bottom font-weight-bold text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            What is password Generator ?
+                                            What is Cryptography ?
                                             <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"
                                                 aria-hidden="true"></i>
                                             <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"
@@ -113,16 +87,16 @@
                                     </h5>
                                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionRental">
                                         <div class="accordion-body text-lg">
-                                            everyone knows what a password is, in todays world no one is unaware of what a password is, but most peoples are unaware of how strong a password should be. by overlooking this serious issue, peoples tend to just create random simple repeated password
-                                            for their for their utmost important accounts online.this password are pretty easily guessable because its repeated and not thought through properly,hackers take the advantage of this behavior and perform malicious
-                                            attacks on use accounts. this generator aims to create password so hard that no one can imagine in day to day basis of use.
+                                            Cryptography is the practice of secure communication in the presence of third parties. It is used in a variety of applications, including email, file sharing, and secure communications. In order to ensure data secrecy, cryptographic algorithms are used
+                                            to encode data so that it can only be read by those for whom it is intended. One such cryptographic algorithm is MD5. It produces a 128-bit hash value that can be used to verify the integrity of a message or
+                                            file.
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item mb-3">
                                     <h5 class="accordion-header" id="headingTwo">
                                         <button class="accordion-button border-bottom font-weight-bold text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            What are those checkboxes for ?
+                                            What is Hashing ?
                                             <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"
                                                 aria-hidden="true"></i>
                                             <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"
@@ -131,16 +105,17 @@
                                     </h5>
                                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionRental">
                                         <div class="accordion-body text-lg">
-                                            Those checkboxes are available options for a password to generate secure password
+                                            A hash function is a mathematical algorithm that takes an input of any length and produces an output of a fixed length. The output is known as the hash value, digest, or checksum. Hash functions are used in many applications, such as cryptography, data
+                                            synchronization, and authentication. In data synchronization, for example, two files that are intended to be identical will have the same hash value. This allows users to verify that the files are indeed the
+                                            same and have not been corrupted or tampered with.
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
         </div>
 
@@ -157,20 +132,20 @@
                     <div class="card shadow-primary shadow-lg">
                         <div class="card-header p-0 mx-3 mt-n4 position-relative z-index-1">
                             <a href="javascript:;" class="d-block blur-shadow-image">
-                                <img src="../assets/img/calcee.jpg" class="img-fluid border-radius-md" alt="anastasia" loading="lazy">
+                                <img src="../assets/img/password.jpg" class="img-fluid border-radius-md" alt="anastasia" loading="lazy">
                             </a>
                             <div class="colored-shadow" style="background-image: url(&quot;../../assets/img/examples/color2.jpg&quot;);"></div>
                         </div>
                         <div class="card-body">
                             <span class="text-gradient text-primary text-uppercase text-xs font-weight-bold">Personal Tools</span>
                             <a href="javascript:;" class="card-title mt-3 h5 d-block text-darker">
-                                    Age Calculator
-                                </a>
+                                Password Generator
+                            </a>
                             <p class="card-description mb-4">
                                 Generate secure password in seconds, increase the security of your online experience.
                             </p>
                             <div class="author align-items-center">
-                                <a href="./age-calculator.html" class="btn bg-gradient-primary btn-icon btn-lg" type="button">
+                                <a href="./password-generator.html" class="btn bg-gradient-primary btn-icon btn-lg" type="button">
                                     <div class="d-flex align-items-center">
                                         Open
                                         <i class="fa fa-arrow-right ms-2" aria-hidden="true"></i>
@@ -184,20 +159,20 @@
                     <div class="card shadow-primary shadow-lg">
                         <div class="card-header p-0 mx-3 mt-n4 position-relative z-index-1">
                             <a href="javascript:;" class="d-block blur-shadow-image">
-                                <img src="../assets/img/code.jpg" class="img-fluid border-radius-md" alt="nastuh" loading="lazy">
+                                <img src="../assets/img/qr.png" class="img-fluid border-radius-md" alt="nastuh" loading="lazy">
                             </a>
                             <div class="colored-shadow" style="background-image: url(&quot;../../assets/img/examples/color3.jpg&quot;);"></div>
                         </div>
                         <div class="card-body">
-                            <span class="text-gradient text-info text-uppercase text-xs font-weight-bold">Calculation Tools</span>
+                            <span class="text-gradient text-info text-uppercase text-xs font-weight-bold">Generators</span>
                             <a href="javascript:;" class="text-darker card-title mt-3 h5 d-block">
-                                Decimal To Binary
+                                QR Code Generator
                             </a>
                             <p class="card-description mb-4">
-                                If you are programmer or computer science student, this tools is really helpful for you
+                                simple on the go, QR Code generator for your dail tasks
                             </p>
-                            <div class="author align-items-center\">
-                                <a href="./decimal-to-binary.html" class="btn bg-gradient-primary btn-icon btn-lg" type="button">
+                            <div class="author align-items-center">
+                                <a href="./qr-code-generator.html" class="btn bg-gradient-primary btn-icon btn-lg" type="button">
                                     <div class="d-flex align-items-center">
                                         Open
                                         <i class="fa fa-arrow-right ms-2" aria-hidden="true"></i>
@@ -243,7 +218,7 @@
     <script src="../assets/js/core/bootstrap.min.js"></script>
     <script src="../assets/js/core/jquery.min.js"></script>
     <script src="../assets/js/material-kit-pro.min.js"></script>
-    <script src="../assets/js/tools/password-generator.js"></script>
+    <script src="../assets/js/tools/age-in-dog-years.js"></script>
 
 </body>
 

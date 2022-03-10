@@ -21,20 +21,53 @@
 <body>
 
     <custom-navbar></custom-navbar>
+    <!-- -------- START HEADER 10 w/ carousel ------- -->
     <header>
-
-        <div class="page-header min-vh-75" style="background-image: url('./assets/img/hammer.jpg')" loading="lazy">
-            <span class="mask bg-gradient-dark opacity-4"></span>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto text-white text-center">
-                        <h2 class="text-white">Welcome to Toolsvala</h2>
-                        <p class="lead">Best tools on the internet with responsive UI.</p>
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <div class="page-header min-vh-75" style="background-image: url('assets/img/festive.jpg');" loading="lazy">
+                        <span class="mask bg-gradient-dark"></span>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6 my-auto">
+                                    <h4 class="text-white mb-0 fadeIn1 fadeInBottom">Double the joy of festivals with</h4>
+                                    <h1 class="text-white fadeIn2 fadeInBottom">Festival Photo
+                                        <br>
+                                        <span class="text-rose fs-1">&</span> Video Creator</h1>
+                                    <p class="lead text-white opacity-8 fadeIn3 fadeInBottom">Create Good looking posts and videos on the go, step up your posting game and wish your family and friends like never before</p>
+                                    <a href="https://play.google.com/store/apps/details?id=com.bizzpost.in" class="btn  btn-primary fadeIn5">Check Out</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <div class="page-header min-vh-75" style="background-image: url('assets/img/dog.jpg')" loading="lazy">
+                        <span class="mask bg-gradient-dark"></span>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6 my-auto">
+                                    <h4 class="text-white mb-0 fadeIn1 fadeInBottom">try out our new</h4>
+                                    <h1 class="text-white fadeIn2 fadeInBottom">Your Age In <span class="text-rose">DOG</span> Years</h1>
+                                    <p class="lead text-white opacity-8 fadeIn3 fadeInBottom">Find out how old you are if you were the man's best friend, a dog</p>
+                                    <a href="tools/age-in-dog-years.html" class="btn btn-primary fadeIn5">Find Out</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="min-vh-75 position-absolute w-100 top-0">
+
+                <a class="carousel-control-next " href="#carouselExampleControls" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon position-absolute bottom-50" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
+            </div>
         </div>
-        <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
+
+        <div class="card shadow-lg blur mt-n5 mx-4 mb-4">
             <section class="py-7">
                 <div class="container">
                     <div class="row">
@@ -209,7 +242,9 @@
                 </div>
             </section>
         </div>
+
     </header>
+    <!-- -------- END HEADER 11 w/ carousel ------- -->
     <!-- -------- END HEADER 4 w/ search book a ticket form ------- -->
     <custom-footer></custom-footer>
 

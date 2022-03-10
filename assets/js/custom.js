@@ -13,7 +13,7 @@ class CustomHeader extends HTMLElement {
                                 Toolsvala
                             </a>
 
-                            <button class="navbar-toggler shadow-none ms-md-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                            <button class="navbar-toggler bg-white shadow-none ms-md-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon mt-2">
                                     <span class="navbar-toggler-bar bar1"></span>
                                     <span class="navbar-toggler-bar bar2"></span>
@@ -25,8 +25,7 @@ class CustomHeader extends HTMLElement {
                                     <li class="nav-item dropdown dropdown-hover mx-2">
                                         <a role="button" class="nav-link ps-2 d-flex cursor-pointer align-items-center text-white" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="ni ni-settings opacity-6 me-2 text-md text-white"></i> Tools
-                                            <img src="../assets/img/down-arrow.svg" alt="down-arrow" class="arrow ms-2 d-lg-block d-none">
-                                            <img src="../assets/img/down-arrow.svg" alt="down-arrow" class="arrow ms-1 d-lg-none d-block ms-auto">
+                                            <i alt="down-arrow" class="arrow ms-1 d-lg-none fa fa-arrow-down d-block ms-auto"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-end dropdown-menu-animation ms-n3 dropdown-xl p-3 border-radius-xl mt-0 mt-lg-3" aria-labelledby="dropdownMenuPages">
                                             <div class="row d-none d-lg-block">
@@ -36,6 +35,9 @@ class CustomHeader extends HTMLElement {
 
                                                             <a href="../tools/age-calculator.html" class="dropdown-item text-wrap border-radius-md">
                                                                 <span>Age Calculator</span>
+                                                            </a>
+                                                            <a href="../tools/age-in-dog-years.html" class="dropdown-item text-wrap border-radius-md">
+                                                                <span>Age in Dog Years <br> Calculator</span>
                                                             </a>
                                                             <a href="../tools/qr-code-generator.html" class="dropdown-item text-wrap border-radius-md">
                                                                 <span>QR Code</span>
@@ -71,24 +73,27 @@ class CustomHeader extends HTMLElement {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="d-lg-none">
+                                            <div class="d-lg-none ">
 
-                                                <a href="../tools/age-calculator.html" class="dropdown-item border-radius-md">
-                                                    Calculator
+                                                <a href="../tools/age-calculator.html" class="dropdown-item text-white border-radius-md">
+                                                    Age Calculator
                                                 </a>
-                                                <a href="../tools/qr-code-generator.html" class="dropdown-item border-radius-md">
+                                                <a href="../tools/age-in-dog-years.html" class="dropdown-item text-white border-radius-md">
+                                                    Age in Dog Year Calculator
+                                                </a>
+                                                <a href="../tools/qr-code-generator.html" class="dropdown-item text-white border-radius-md">
                                                     QR Code
                                                 </a>
-                                                <a href="../tools/decimal-to-binary.html" class="dropdown-item border-radius-md">
+                                                <a href="../tools/decimal-to-binary.html" class="dropdown-item text-white border-radius-md">
                                                     Decimal To Binary Converter
                                                 </a>
-                                                <a href="../tools/md5-hash-generator.html" class="dropdown-item border-radius-md">
+                                                <a href="../tools/md5-hash-generator.html" class="dropdown-item text-white border-radius-md">
                                                     MD5 Hash Generator
                                                 </a>
-                                                <a href="../tools/password-generator.html" class="dropdown-item border-radius-md">
+                                                <a href="../tools/password-generator.html" class="dropdown-item text-white border-radius-md">
                                                     Password Generator
                                                 </a>
-                                                <a href="https://play.google.com/store/apps/details?id=com.bizzpost.in" class="dropdown-item border-radius-md">
+                                                <a href="https://play.google.com/store/apps/details?id=com.bizzpost.in" class="dropdown-item text-white border-radius-md">
                                                 Festival Image & Video Creator
                                                 </a>
                                             </div>
