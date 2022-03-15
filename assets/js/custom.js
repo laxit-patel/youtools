@@ -141,5 +141,22 @@ class CustomFooter extends HTMLElement {
     }
 }
 
+class Gtag extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5ZS1XCMPVQ"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-5ZS1XCMPVQ');
+        </script>
+        `
+    }
+}
+
 customElements.define('custom-navbar', CustomHeader)
 customElements.define('custom-footer', CustomFooter)
+customElements.define('custom-gtag', Gtag)

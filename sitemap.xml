@@ -1,0 +1,40 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
+<url>
+<loc>https://toolsvala.com/</loc>
+<lastmod>2022-03-10T16:34:17+00:00</lastmod>
+<priority>1.00</priority>
+</url>
+<url>
+<loc>https://toolsvala.com/tools/age-in-dog-years.html</loc>
+<lastmod>2022-03-10T16:34:22+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://toolsvala.com/tools/password-generator.html</loc>
+<lastmod>2022-03-10T16:34:23+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://toolsvala.com/tools/age-calculator.html</loc>
+<lastmod>2022-03-10T16:34:22+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://toolsvala.com/tools/qr-code-generator.html</loc>
+<lastmod>2022-03-10T16:34:23+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://toolsvala.com/tools/decimal-to-binary.html</loc>
+<lastmod>2022-03-10T16:34:22+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://toolsvala.com/tools/md5-hash-generator.html</loc>
+<lastmod>2022-03-10T16:34:23+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+</urlset>
+::-webkit-scrollbar {display: none;}
