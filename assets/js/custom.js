@@ -7,10 +7,10 @@ class CustomHeader extends HTMLElement {
                     <nav class="navbar navbar-expand-lg gradient-animation  blur border-radius-xl top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
                         <div class="container-fluid px-0">
                             <a class="navbar-brand font-weight-bolder ms-sm-3 fs-5  d-none d-md-block text-white" href="../index.html" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom" >
-                                Toolsvala
+                                <img src="/assets/img/favicon.png" alt="favicon" style="height:30px"> Toolsvala
                             </a>
                             <a class="navbar-brand font-weight-bolder ms-sm-3  d-block d-md-none text-white" href="../index.html" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom" >
-                                Toolsvala
+                            <img src="/assets/img/favicon.png" alt="favicon" style="height:30px"> Toolsvala
                             </a>
 
                             <button class="navbar-toggler bg-white shadow-none ms-md-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
@@ -124,7 +124,7 @@ class CustomFooter extends HTMLElement {
             <div class="row">
             <div class="col-lg-4 me-auto mb-lg-0 mb-4 text-lg-start text-center">
                 <p class="text-sm text-white opacity-8 mb-0">
-                Copyright © <script>document.write(new Date().getFullYear())</script> Toolsvala.com
+                 <img src="/assets/img/logos/logo.png" class="img img-fluid" style="height:50px;">
                 </p>
             </div>
             <div class="col-lg-6 ms-auto text-lg-end text-center">
